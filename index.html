@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="./estilos/style.css">
     <title>Hello, world!</title>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#navbarSupportedContent" data-offset="57">
     <!-- !inicio HEadr -->
-    <header class="header">
+    <header class="header sticky-top">
         
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
@@ -28,19 +28,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                      <a class="nav-link" href="#">La conferencia</a>
+                      <a class="nav-link" href="#main">La conferencia</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Los Oradores</a>
+                      <a class="nav-link" href="#speakers">Los Oradores</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">El lugar y Fecha</a>
+                      <a class="nav-link" href="#place-time">El lugar y Fecha</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Convi&eacutertete en Orador</a>
+                      <a class="nav-link" href="#orador">Convi&eacutertete en Orador</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link textplatzi" href="#">Compra de Tickets</a>
+                      <a class="nav-link textplatzi" href="#" data-toggle="modal" data-target="#modalCompra">Compra de Tickets</a>
                     </li>
                   </ul>
                   
@@ -53,7 +53,7 @@
     <!--! Fin header -->
 
     <!--* inicio mai -->
-    <main class="main">
+    <main id="main" class="main">
         
         <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-pause="false">
                 <div class="carousel-inner">
@@ -81,7 +81,7 @@
                                     para ti.
                                 </p>
                                 <a href="#" class="btn btn-outline-light">Quiero ser Orador</a>
-                                <button type="button" class="btn btn-platzi">Comprar tickets</button>
+                                <button type="button" class="btn btn-platzi" data-toggle="modal" data-target="#modalCompra">Comprar tickets</button>
                             </div>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
     <!--* fin main -->
 
     <!--! speakers inicio -->
-    <section class="speakers mt-4">
+    <section id="speakers" class="speakers mt-4">
 
         <div class="container">
 
@@ -118,7 +118,11 @@
                     <div class="card" >
                             <img src="./images/wo1.jpg" class="card-img-top" alt="wo1">
                             <div class="card-body">
-                              <h5 class="card-title">Marie Lisno</h5>
+                              <h5 class="card-title m-0">Marie Lisno</h5>
+                              <div class="badges mb-2">
+                                <span class="badge badge-warning">Javascript</span>
+                                <span class="badge badge-info">React</span>
+                              </div>
                               <p class="card-text">
                                     Ut posuere sem sed metus porta, facilisis fringilla tortor maximus. Sed laoreet tempor aliquam. Phasellus quis augue condimentum, iaculis turpis eget, scelerisque leo. 
                               </p>
@@ -131,7 +135,11 @@
                     <div class="card">
                             <img src="./images/wo2.jpg" class="card-img-top" alt="wo2">
                             <div class="card-body">
-                             <h5 class="card-title">Malu perez</h5>
+                             <h5 class="card-title mb-0">Malu perez</h5>
+                             <div class="badges mb-2">
+                              <span class="badge badge-warning">Phyton</span>
+                              <span class="badge badge-info">Mongo-Db</span>
+                            </div>
                             <p class="card-text">
                                         Ut posuere sem sed metus porta, facilisis fringilla tortor maximus. Sed laoreet tempor aliquam. Phasellus quis augue condimentum, iaculis turpis eget, scelerisque leo. 
                             </p>
@@ -144,7 +152,11 @@
                             <div class="card">
                                 <img src="./images/man1.jpg" class="card-img-top" alt="man1">
                                 <div class="card-body">
-                                 <h5 class="card-title">Paula correa</h5>
+                                 <h5 class="card-title mb-0">Paula correa</h5>
+                                 <div class="badges mb-2">
+                                  <span class="badge badge-warning">Angula</span>
+                                  <span class="badge badge-info">Html5</span>
+                                </div>
                                 <p class="card-text">
                                             Ut posuere sem sed metus porta, facilisis fringilla tortor maximus. Sed laoreet tempor aliquam. Phasellus quis augue condimentum, iaculis turpis eget, scelerisque leo. 
                                 </p>
@@ -157,7 +169,11 @@
                         <div class="card">
                             <img src="./images/man2.jpg" class="card-img-top" alt="man2">
                             <div class="card-body">
-                             <h5 class="card-title">Andrew Marin</h5>
+                             <h5 class="card-title mb-0">Andrew Marin</h5>
+                             <div class="badges mb-2">
+                              <span class="badge badge-warning">Vj.s</span>
+                              <span class="badge badge-info">Css</span>
+                            </div>
                             <p class="card-text">
                                         Ut posuere sem sed metus porta, facilisis fringilla tortor maximus. Sed laoreet tempor aliquam. Phasellus quis augue condimentum, iaculis turpis eget, scelerisque leo. 
                             </p>
@@ -179,6 +195,101 @@
 
 
     <!--! séakers fin -->
+
+    <!-- **seccion lugar y fecha de vento -->
+    <section id="place-time" class="place-time">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-12 col-lg-6 pl-0 pr-0">
+            <img src="./images/1.jpg" alt="Honolulu">
+          </div>
+          <div class="col-12 col-lg-6 pb-4 ">
+            <h2 class="mt-2">Honolulu -October 2015</h2>
+            <p>
+              Honolulu u Honolulú2​ es la capital y localidad más grande del estado de Hawái, en los Estados Unidos.nota 1​ Honolulu es la más sureña de entre las principales ciudades estadounidenses. Aunque el nombre de Honolulu se refiere al área urbana en la costa sureste de la isla de Oahu, la ciudad y el condado de Honolulu han formado una ciudad-condado consolidada que cubre toda la isla (aproximadamente 600 km² de superficie).
+
+
+            </p>
+            <a href="" class="btn btn-outline-light">Conoce m&aacutes</a>
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <!-- ***seccion lugar y fecha de vento -->
+    <!-- !convierte en speaker -->
+    <section id="orador" class="orador pt-4 pb-4">
+      <div class="container">
+
+        <div class="row">
+          <div class="col text-uppercase text-center">
+            <small>Conviertete en un </small>
+            <h1>ORADOR</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center">
+            An&oacutetate como orador para dar una charla<abbr data-toggle="tooltip" title="Charlas de 5 minutos"> Charla ignite</abbr>.
+            Cu&eacutentanos de que quieres hablar
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 pt-2">
+            <form>
+              <div class="form-row">
+                <div class=" form-group col-12 col-md-6">
+                  <input type="text" class="form-control" placeholder="Nombre">
+                </div>
+                <div class=" form-group col-12 col-md-6">
+                  <input type="text" class="form-control" placeholder="Apellido">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class=" form-group col">
+                  <textarea name="text" class="form-control form-control-lg" placeholder="Sobre que quieres hablar?" id="" cols="30" rows="10"></textarea>
+                  <small class="form-text text-muted">
+                    *Recuerda Incluir un <abbr data-toggle="tooltip" title="El titulo es el qeu conecta"> Titulo</abbr> para tu charla
+                  </small>
+                </div>
+              </div>
+              <div class="fomr-row">
+                <div class="col">
+                  <button type="button" class="btn btn-platzi btn-block">Enviar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+          
+      </div>
+      
+
+
+
+
+
+
+    </section>
+
+
+    <!--! convierte en speaker -->
+
+
     <!--! Inicia el footer -->
     <footer class="footer pt-4 pb-4" >
         <div class="container">
@@ -206,9 +317,46 @@
         </div>
 
     </footer>
+<!-- Modal -->
+<div class="modal fade" id="modalCompra" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Comprar tickets</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="">
+          <div class="form-row">
+            <div class="form-gorup col">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">@</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+            </div>
+            
+          </div>
+        </form>
+        <div class="alert alert-warning" role="alert">
+          Recibiras un correo de confirmacion!!
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-platzi">Comprar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal -->
     <!--! Se cierra footer -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="index.js"> </script>
   </body>
 </html>

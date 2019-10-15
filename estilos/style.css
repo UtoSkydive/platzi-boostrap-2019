@@ -39,6 +39,13 @@ object-fit:cover;
     background-color: #82ad36;
     color: white;
 }
+.place-time img{
+    max-width: 100%;
+}
+.place-time{
+    background: #273b47;
+    color:white;
+}
 .footer{
     background:#273b47 ;
     
